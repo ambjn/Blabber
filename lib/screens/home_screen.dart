@@ -102,6 +102,11 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Pallete.firstSuggestionBoxColor,
+        child: const Icon(Icons.mic),
+      ),
     );
   }
 }
