@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Blabber',
       theme: ThemeData.light().copyWith(
-          scaffoldBackgroundColor: Pallete.whiteColor, useMaterial3: true),
+          scaffoldBackgroundColor: Pallete.whiteColor,
+          appBarTheme: const AppBarTheme(backgroundColor: Pallete.whiteColor),
+          useMaterial3: true),
       home: const HomeScreen(),
     );
   }
