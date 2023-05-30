@@ -58,7 +58,6 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 24, letterSpacing: 2),
         ),
-        leading: const Icon(Icons.menu),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -72,8 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 120,
                     margin: const EdgeInsets.only(top: 5),
                     decoration: const BoxDecoration(
-                        color: Pallete.assistantCircleColor,
-                        shape: BoxShape.circle),
+                      color: Pallete.assistantCircleColor,
+                      shape: BoxShape.circle,
+                    ),
                   ),
                 ),
                 Container(
@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .copyWith(topLeft: Radius.zero, topRight: Radius.zero)),
               child: const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
-                child: Text("hey, what task can i do for you?",
+                child: Text("hello there, how may I assist you today?",
                     style: TextStyle(
                       fontFamily: 'Cera Pro',
                       color: Pallete.mainFontColor,
