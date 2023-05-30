@@ -1,4 +1,5 @@
 import 'package:blabber/theme/pallete.dart';
+import 'package:blabber/widgets/feature_box.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -49,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             margin:
-                const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 30),
+                const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 25),
             decoration: BoxDecoration(
                 border: Border.all(color: Pallete.borderColor),
                 borderRadius: BorderRadius.circular(20)
@@ -68,14 +69,37 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             padding: const EdgeInsets.only(top: 22, left: 22),
             alignment: Alignment.centerLeft,
-            child: const Text("here are a few features",
+            child: const Text("here are a few features ➡️",
                 style: TextStyle(
                     fontFamily: 'Cera Pro',
                     color: Pallete.mainFontColor,
                     fontSize: 20,
                     fontWeight: FontWeight.bold)),
           ),
+          const SizedBox(height: 5),
           // Feature List
+          const Column(
+            children: [
+              FeatureBox(
+                color: Pallete.firstSuggestionBoxColor,
+                headerText: 'ChatGPT',
+                descriptionText:
+                    'a smart way to stay organized and informed with ChatGPT',
+              ),
+              FeatureBox(
+                color: Pallete.secondSuggestionBoxColor,
+                headerText: 'Dall-E',
+                descriptionText:
+                    'Get inspired and stay creative with your personal assistant powered by Dall-E',
+              ),
+              FeatureBox(
+                color: Pallete.thirdSuggestionBoxColor,
+                headerText: 'Smart Voice Assistant',
+                descriptionText:
+                    'Get the best of both worlds with a voice assistant powered by Dall-E and ChatGPT',
+              ),
+            ],
+          )
         ],
       ),
     );
