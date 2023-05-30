@@ -86,18 +86,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 25),
               decoration: BoxDecoration(
                   border: Border.all(color: Pallete.borderColor),
-                  borderRadius: BorderRadius.circular(20).copyWith(
-                      bottomLeft: Radius.zero, topRight: Radius.zero)),
+                  borderRadius: BorderRadius.circular(20)
+                      .copyWith(bottomLeft: Radius.zero, topRight: Radius.zero),
+                  color: generatedImageUrl != null
+                      ? Pallete.secondSuggestionBoxColor
+                      : Pallete.whiteColor),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: generatedImageUrl != null
-                    ? Container(
-                        decoration: const BoxDecoration(
-                            color: Pallete.assistantCircleColor),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.network(generatedImageUrl!),
-                        ),
+                    ? ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.network(generatedImageUrl!),
                       )
                     : Text(
                         generatedContent == null
@@ -155,11 +154,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold)),
             ),
+            // Search Field
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
               child: Card(
                 elevation: 2,
                 child: TextField(
+                    style: const TextStyle(
+                        fontFamily: 'Cera Pro',
+                        color: Pallete.mainFontColor,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400),
                     textAlign: TextAlign.center,
                     controller: searchTextEditingController,
                     decoration: InputDecoration(
