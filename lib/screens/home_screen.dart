@@ -15,13 +15,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Blabber💬',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          'blabber💬',
+          style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 24, letterSpacing: 2),
         ),
         leading: const Icon(Icons.menu),
       ),
       body: Column(
         children: [
+          // Blabber Logo
           Stack(
             children: [
               Center(
@@ -42,7 +44,38 @@ class _HomeScreenState extends State<HomeScreen> {
                         image: AssetImage('assets/images/blabber_logo.jpeg'))),
               )
             ],
-          )
+          ),
+          // Chat Bubble
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            margin:
+                const EdgeInsets.symmetric(horizontal: 40).copyWith(top: 30),
+            decoration: BoxDecoration(
+                border: Border.all(color: Pallete.borderColor),
+                borderRadius: BorderRadius.circular(20)
+                    .copyWith(topLeft: Radius.zero, topRight: Radius.zero)),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Text("hey, what task can i do for you?",
+                  style: TextStyle(
+                    fontFamily: 'Cera Pro',
+                    color: Pallete.mainFontColor,
+                    fontSize: 25,
+                  )),
+            ),
+          ),
+          // Here are a few features
+          Container(
+            padding: const EdgeInsets.only(top: 22, left: 22),
+            alignment: Alignment.centerLeft,
+            child: const Text("here are a few features",
+                style: TextStyle(
+                    fontFamily: 'Cera Pro',
+                    color: Pallete.mainFontColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold)),
+          ),
+          // Feature List
         ],
       ),
     );
