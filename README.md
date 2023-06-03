@@ -2,7 +2,7 @@
 
 ## About:
 
-Blabber is your personal assistant mage using OpenAI's APIs, get answers to your queries & generate super cool images.
+Blabber is your personal assistant made using OpenAI's APIs, get answers to your queries & generate super cool images.
 
 ## Packages:
 
@@ -15,7 +15,7 @@ Blabber is your personal assistant mage using OpenAI's APIs, get answers to your
 ## Features:
 
 <ul>
-<li> Search for any querie: </li>
+<li> Search for any queries </li>
 <li> Generate any image using dall-E </li>
 <li> Get your text prompts read out </li>
 </ul>
